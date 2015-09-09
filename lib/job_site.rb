@@ -3,14 +3,10 @@ class JobSite
 
   def initialize(location, contact)
     @location = location
-    @contact = contact
+    @contact = contact || NullContact.new
   end
 
   def contact_name
-    if contact.name.nil?
-      'no name'
-    else
-      contact.name
-    end
+    contact.name
   end
 end
