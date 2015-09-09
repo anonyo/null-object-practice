@@ -3,15 +3,14 @@ class JobSite
 
   def initialize(location, contact)
     @location = location
-    @contact = contact ||  NullContact.new
+    @contact = contact
   end
 
   def contact_name
-    contact.name
-  end
-
-
-  def email_contact(email_body)
-      contact.deliver_personalized_email(email_body)
+    if contact.name.nil?
+      'no name'
+    else
+      contact.name
+    end
   end
 end

@@ -1,2 +1,2 @@
-class Contact < Struct.new(:name, :phone)
+class Contact < Struct.new(:name)
 end
