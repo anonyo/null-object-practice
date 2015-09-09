@@ -9,8 +9,7 @@ describe JobSite do
       expect(jobsite.contact_name).to eq 'John'
     end
     it 'returns no name when contact name is nil' do
-      contact = Contact.new(nil)
-      jobsite = JobSite.new('Montreal', contact)
+      jobsite = JobSite.new('Montreal', nil)
 
       expect(jobsite.contact_name).to eq 'no name'
     end
