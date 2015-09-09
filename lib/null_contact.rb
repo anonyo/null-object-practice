@@ -9,3 +9,12 @@ class NullContact
     # Intentionally empty. We *want* to do nothing here.
   end
 end
+
+def foo
+  if bar
+    # blah
+    # blah
+    # blah
+    # blah
+  end
+end
